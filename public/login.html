@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in - GrammaConnect CSP Portal</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="brand-wrap">
+      <span class="brand-icon">🌾</span>
+      <div class="brand-text">
+        <a class="brand" href="/">GrammaConnect</a>
+        <span class="brand-badge">Community Service Project</span>
+      </div>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about.html">About CSP</a>
+      <a class="nav-btn" href="/register.html">Sign up</a>
+    </nav>
+  </header>
+
+  <!-- Login Form Wrap -->
+  <main class="auth-wrap">
+    <form id="login-form" class="auth-card">
+      <div class="auth-header">
+        <h2>Welcome Back</h2>
+        <p>Log in to access your GrammaConnect dashboard</p>
+      </div>
+
+      <!-- Quick Demo Login Buttons for Evaluators/Examiners -->
+      <div class="demo-login-box">
+        <p>⚡ Quick Demo Access (For Evaluators & Testing)</p>
+        <div class="demo-login-actions">
+          <button type="button" id="demo-client-btn" class="btn sm outline">Demo Client</button>
+          <button type="button" id="demo-worker-btn" class="btn sm secondary">Demo Worker</button>
+        </div>
+      </div>
+
+      <label>
+        Email Address
+        <input name="email" id="email" type="email" placeholder="e.g. resident@example.com" required>
+      </label>
+
+      <label>
+        Password
+        <input name="password" id="password" type="password" placeholder="••••••••" required>
+      </label>
+
+      <button type="submit" class="btn" style="margin-top: 6px;">Log in to Account</button>
+      <p class="msg" id="msg"></p>
+      
+      <p class="muted" style="text-align: center; margin-top: 4px;">
+        New to GrammaConnect? <a href="/register.html">Create an account</a>
+      </p>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bottom">
+      GrammaConnect · Community Service Project (CSP) Portal · Dept of Information Technology
+    </div>
+  </footer>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>

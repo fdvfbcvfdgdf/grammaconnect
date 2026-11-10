@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - GrammaConnect CSP Portal</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-wrap">
+      <span class="brand-icon">🌾</span>
+      <div class="brand-text">
+        <a class="brand" href="/">GrammaConnect</a>
+        <span class="brand-badge">CSP Portal</span>
+      </div>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about.html">About CSP</a>
+      <span id="who" style="color: #fef3c7; font-weight: 600; font-size: 0.9rem;"></span>
+      <button id="logout" class="btn sm secondary">Log out</button>
+    </nav>
+  </header>
+
+  <main id="app" class="dashboard-container">
+    <p class="muted" style="text-align: center; padding: 40px;">Loading your dashboard...</p>
+  </main>
+
+  <!-- Complete Job & Rating Modal (Hidden by default) -->
+  <div id="rating-modal" class="modal-backdrop" style="display: none;">
+    <div class="modal-dialog">
+      <h3 style="color: var(--primary);">Mark Job Completed</h3>
+      <p style="color: var(--text-muted); font-size: 0.92rem;">Rate the service provided by the local worker to build community trust.</p>
+      
+      <label>
+        Worker Rating
+        <select id="modal-rating-val" style="margin-top: 4px;">
+          <option value="5">★★★★★ 5 - Excellent Work</option>
+          <option value="4">★★★★☆ 4 - Good Service</option>
+          <option value="3">★★★☆☆ 3 - Satisfactory</option>
+          <option value="2">★★☆☆☆ 2 - Below Average</option>
+          <option value="1">★☆☆☆☆ 1 - Unsatisfactory</option>
+        </select>
+      </label>
+
+      <label>
+        Feedback / Review Note
+        <textarea id="modal-feedback-val" rows="2" placeholder="e.g. Arrived on time, fixed wiring neatly, fair price."></textarea>
+      </label>
+
+      <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 8px;">
+        <button type="button" id="modal-cancel-btn" class="btn outline sm">Cancel</button>
+        <button type="button" id="modal-submit-btn" class="btn sm">Complete & Submit Rating</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      GrammaConnect · Community Service Project (CSP) Portal · Dept of Information Technology
+    </div>
+  </footer>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

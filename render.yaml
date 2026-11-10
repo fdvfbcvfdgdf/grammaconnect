@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: grammaconnect
+    env: node
+    plan: free
+    buildCommand: ""
+    startCommand: "node server.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GRAMMA_SECRET
+        generateValue: true

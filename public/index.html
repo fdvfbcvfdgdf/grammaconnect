@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrammaConnect - Rural Community Service Project (CSP) Portal</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Navigation Topbar -->
+  <header class="topbar">
+    <div class="brand-wrap">
+      <span class="brand-icon">🌾</span>
+      <div class="brand-text">
+        <a class="brand" href="/">GrammaConnect</a>
+        <span class="brand-badge">Community Service Project</span>
+      </div>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about.html">About CSP</a>
+      <a href="/login.html">Log in</a>
+      <a class="nav-btn" href="/register.html">Sign up</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-pill">🤝 Community Service Project (CSP) · Dept of IT</div>
+    <h1>Connecting Village Households With Trusted Local Workers</h1>
+    <p>A digital platform empowering unorganized rural artisans, daily-wage tradespeople, and village communities. Find verified electricians, plumbers, carpenters, painters, and cooks in your local panchayat.</p>
+    
+    <div class="hero-actions">
+      <a class="btn" href="/register.html?role=client">I Need a Worker</a>
+      <a class="btn secondary" href="/register.html?role=worker">I Am a Worker</a>
+      <a class="btn outline" href="#workers-section" style="color:#ffffff; border-color: rgba(255,255,255,0.4);">Browse Workers</a>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar" id="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num" id="stat-workers">50+</span>
+      <span class="stat-label">Verified Rural Workers</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" id="stat-jobs">120+</span>
+      <span class="stat-label">Jobs Completed</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" id="stat-locations">15+</span>
+      <span class="stat-label">Panchayats Covered</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">₹0</span>
+      <span class="stat-label">Brokerage · 100% Direct</span>
+    </div>
+  </div>
+
+  <!-- Category Pills Filter -->
+  <section class="container" id="workers-section">
+    <div class="section-head">
+      <span class="section-tag">Direct Community Directory</span>
+      <h2>Verified Local Workers in Your Area</h2>
+      <p>Browse skilled workers by category or search by your village/mandal location.</p>
+    </div>
+
+    <div class="category-bar" id="category-bar">
+      <button class="cat-pill active" data-skill="">All Categories</button>
+      <button class="cat-pill" data-skill="electrician">⚡ Electrician</button>
+      <button class="cat-pill" data-skill="plumber">🔧 Plumber</button>
+      <button class="cat-pill" data-skill="carpenter">🪚 Carpenter</button>
+      <button class="cat-pill" data-skill="painter">🎨 Painter</button>
+      <button class="cat-pill" data-skill="cook">🍳 Cook</button>
+      <button class="cat-pill" data-skill="mason">🧱 Mason</button>
+      <button class="cat-pill" data-skill="appliance">❄️ Appliance Repair</button>
+      <button class="cat-pill" data-skill="agriculture">🌾 Farm Help</button>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="card" style="margin-bottom: 24px; padding: 14px 20px;">
+      <div class="filter-row" style="margin-bottom: 0;">
+        <input type="text" id="search-skill" placeholder="Search by skill (e.g. Electrician, Carpenter)">
+        <input type="text" id="search-location" placeholder="Search village / location (e.g. Gudlavalleru)">
+        <button type="button" id="search-btn" class="btn">Filter Workers</button>
+        <button type="button" id="reset-btn" class="btn outline">Reset</button>
+      </div>
+    </div>
+
+    <!-- Worker Cards Grid -->
+    <div id="workers-grid" class="grid-3">
+      <p class="muted" style="text-align: center; grid-column: 1 / -1; padding: 30px;">Loading verified local workers...</p>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <div class="container">
+      <div class="section-head" style="margin-top: 0;">
+        <span class="section-tag">Simple & Transparent</span>
+        <h2>How GrammaConnect Works</h2>
+        <p>Three simple steps to bridge community households with local skilled labor.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-icon">1</div>
+          <h3>Post Work or Browse</h3>
+          <p>Households describe the required job (electrical, plumbing, masonry) or browse local profiles directly.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">2</div>
+          <h3>Appoint Worker Directly</h3>
+          <p>Send an appointment request or contact the worker via phone. No middlemen or commission charges.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">3</div>
+          <h3>Get Work Done & Rate</h3>
+          <p>The worker completes the assignment, receives direct payment, and clients leave a rating to build community trust.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CSP Mission Banner -->
+  <section class="container">
+    <div class="csp-banner">
+      <div class="csp-info">
+        <span class="csp-badge-lg">Community Service Project (CSP) Focus</span>
+        <h3>Social Responsibility & Rural Digital Inclusion</h3>
+        <p>GrammaConnect was conceptualized and developed as part of the Community Service Project curriculum. It addresses unemployment gaps and irregular wages among unorganized rural artisans by giving them free digital visibility in local Gram Panchayats.</p>
+        <div class="csp-highlights">
+          <span class="csp-pill">✓ 0% Commission Exploitation</span>
+          <span class="csp-pill">✓ Direct Phone Contact</span>
+          <span class="csp-pill">✓ Verified Village Profiles</span>
+          <span class="csp-pill">✓ Inclusive for Daily Wagers</span>
+        </div>
+        <div style="margin-top: 20px;">
+          <a class="btn sm" href="/about.html">Read Complete Project Report</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="container" style="margin-bottom: 50px;">
+    <div class="section-head">
+      <span class="section-tag">Community Voices</span>
+      <h2>Feedback From Villages & Workers</h2>
+      <p>Real stories from households and artisans who used the GrammaConnect portal.</p>
+    </div>
+
+    <div class="grid-3" style="margin-bottom: 0;">
+      <div class="card">
+        <div style="color: #eab308; font-size: 1.1rem; margin-bottom: 8px;">★★★★★</div>
+        <p style="font-size: 0.95rem; color: #334155; margin-bottom: 12px;">"Our ceiling fan regulator stopped working right before a family gathering. Through GrammaConnect, we found Suresh within 10 minutes, and he came to our house in Gudlavalleru promptly!"</p>
+        <div style="font-size: 0.85rem; font-weight: 700; color: var(--primary);">— Ravi S., Resident (Gudlavalleru)</div>
+      </div>
+      <div class="card">
+        <div style="color: #eab308; font-size: 1.1rem; margin-bottom: 8px;">★★★★★</div>
+        <p style="font-size: 0.95rem; color: #334155; margin-bottom: 12px;">"Earlier, I had to wait near the town junction for daily wage work and pay commission to agents. With this portal, local households directly appoint me for carpentry jobs. My income has stabilized."</p>
+        <div style="font-size: 0.85rem; font-weight: 700; color: var(--primary);">— Venkata Rao, Carpenter (Gudivada)</div>
+      </div>
+      <div class="card">
+        <div style="color: #eab308; font-size: 1.1rem; margin-bottom: 8px;">★★★★★</div>
+        <p style="font-size: 0.95rem; color: #334155; margin-bottom: 12px;">"A wonderful initiative for our village community. It helps elderly people easily find plumbers and electricians without having to travel to the town market."</p>
+        <div style="font-size: 0.85rem; font-weight: 700; color: var(--primary);">— K. Satyanarayana, Villager (Machilipatnam)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>🌾 GrammaConnect</h4>
+        <p>A digital social platform developed under the Community Service Project (CSP) to empower local artisans, daily wage workers, and village residents.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Academic Project</h4>
+        <p>Community Service Project (CSP)<br>
+        Department of Information Technology<br>
+        Rural Outreach & Social Impact Initiative</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About CSP</a></li>
+          <li><a href="/login.html">Log in</a></li>
+          <li><a href="/register.html">Sign up</a></li>
+          <li><a href="/dashboard.html">User Dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 GrammaConnect · Community Service Project Portal · All rights reserved.
+    </div>
+  </footer>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up - GrammaConnect CSP Portal</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="brand-wrap">
+      <span class="brand-icon">🌾</span>
+      <div class="brand-text">
+        <a class="brand" href="/">GrammaConnect</a>
+        <span class="brand-badge">Community Service Project</span>
+      </div>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about.html">About CSP</a>
+      <a href="/login.html">Log in</a>
+    </nav>
+  </header>
+
+  <!-- Registration Form Wrap -->
+  <main class="auth-wrap">
+    <form id="register-form" class="auth-card" style="max-width: 520px;">
+      <div class="auth-header">
+        <h2>Join GrammaConnect</h2>
+        <p>Register as a household client or skilled village worker</p>
+      </div>
+
+      <label>
+        Full Name
+        <input name="name" placeholder="e.g. Ramesh Kumar" required>
+      </label>
+
+      <label>
+        Email Address
+        <input name="email" type="email" placeholder="e.g. ramesh@example.com" required>
+      </label>
+
+      <label>
+        Phone Number
+        <input name="phone" type="tel" placeholder="e.g. +91 98480 12345">
+      </label>
+
+      <label>
+        Password (min 6 characters)
+        <input name="password" type="password" minlength="6" placeholder="••••••••" required>
+      </label>
+
+      <label>
+        Account Type / Role
+        <select name="role" id="role">
+          <option value="client">Client (Household / I need work done)</option>
+          <option value="worker">Worker (Artisan / I offer a trade service)</option>
+        </select>
+      </label>
+
+      <!-- Worker Specific Fields -->
+      <fieldset id="worker-fields" hidden>
+        <legend>Rural Artisan / Worker Profile</legend>
+        
+        <label>
+          Primary Trade / Skill
+          <input name="skill" placeholder="e.g. Electrician, Plumber, Carpenter, Cook">
+        </label>
+
+        <label>
+          Village / Mandal Area You Serve
+          <input name="location" placeholder="e.g. Gudlavalleru, Machilipatnam, Gudivada">
+        </label>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <label>
+            Daily Rate (INR)
+            <input name="rate" type="number" min="0" placeholder="e.g. 750">
+          </label>
+          <label>
+            Years of Experience
+            <input name="experience" type="number" min="0" placeholder="e.g. 5">
+          </label>
+        </div>
+
+        <label>
+          Work Description & Skills
+          <textarea name="bio" rows="3" placeholder="Briefly describe your experience and the services you provide..."></textarea>
+        </label>
+      </fieldset>
+
+      <button type="submit" class="btn" style="margin-top: 6px;">Complete Registration</button>
+      <p class="msg" id="msg"></p>
+      
+      <p class="muted" style="text-align: center; margin-top: 4px;">
+        Already registered? <a href="/login.html">Log in here</a>
+      </p>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bottom">
+      GrammaConnect · Community Service Project (CSP) Portal · Dept of Information Technology
+    </div>
+  </footer>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>
