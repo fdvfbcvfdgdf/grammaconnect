@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: grammaconnect
+    name: grammaconnect-csp
     env: node
     plan: free
-    buildCommand: ""
+    buildCommand: "npm run build"
     startCommand: "node server.js"
     envVars:
       - key: NODE_ENV
